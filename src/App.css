@@ -1,0 +1,267 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+.App-header {
+  background-color: #021a4b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.main {
+  align-content: center;
+}
+.m-top-10 {
+  margin-top: 10px;
+}
+.cf {
+  font-family: cursive;
+}
+
+.nav-item {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.bg-grad {
+  background-image: linear-gradient(to right, rgb(43, 6, 131), rgb(60, 45, 94));
+  color: white;
+}
+.title-text {
+  color: #9d51e4;
+  text-shadow: 20px #8888;
+}
+
+/* box for content */
+
+.content-box {
+  margin-top: 10px;
+  height: 445px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px gray;
+  background-color: white;
+}
+.content-box .title {
+  height: 35px;
+  color: white;
+  font-style: italic;
+  justify-content: center;
+  align-content: center;
+  text-transform: uppercase;
+  padding: 2px;
+  font-size: 20px;
+  background-image: linear-gradient(to right, rgb(43, 6, 131), rgb(60, 45, 94));
+  border-bottom: 1px solid gray;
+  border-radius: 5px 5px 0px 0px;
+}
+.content-box .body {
+  height: 410px;
+  color: rgb(10, 10, 10);
+  border-radius: 0px 0px 5px 5px;
+  overflow: auto;
+  padding:5px;
+  /* border-left: 1px solid rgb(43, 6, 131); */
+  /* border-right: 1px solid rgb(43, 6, 131); */
+  /* border-bottom: 1px solid rgb(43, 6, 131); */
+}
+.side-bar {
+  height: 88vh;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Chat box */
+.chat-box{
+  padding:10px;
+  display: flex;
+  border-bottom: 1px solid gray;
+  margin:2px;
+  margin-bottom:5px;
+  box-shadow: 0px 0px 3px rgba(73, 66, 90, 0.644);
+}
+.chat-box .img{
+  
+  height: 60px;
+  width: 60px;
+  background-color: indigo;
+  border-radius: 2px;
+}
+.chat-box .friend-name{
+  margin-left:20px;
+  font-size: 18px;
+  font-weight: 650;
+  font-family:serif;
+}
+
+.chat-box .chat-title{
+  text-align: left;
+  margin-left:20px;
+  font-size: 20px;
+  font-weight: 650;
+  font-family:serif;
+}
+
+/* Notification box */
+
+.noti-box{
+  height: 90px;
+  padding:10px;
+  text-align: left;
+  border-bottom: 1px solid gray;
+  margin:2px;
+  margin-bottom:5px;
+  box-shadow: 0px 0px 3px rgba(73, 66, 90, 0.644);
+}
+.noti-box .noti-title{
+  font-size: 20px;
+  font-weight: 650px;
+  
+}
+.noti-box .detail{
+  font-size: 15px;
+  color: rgba(73, 66, 90, 0.644);
+}
+
+.rounded {
+  border-radius: 5x;
+}
+.overflow-auto {
+  overflow: auto;
+}
+
+.noti-box .text-muted{
+  align-self: end;
+  float: right;
+}
+
+/* Profile box css */
+
+.profile{
+  
+}
+
+.profile .img{
+  height:180px;
+  width: 180px;
+  background-color: slateblue;
+  border-radius: 90px;
+}
+
+
+.profile .table td img{
+  height:20px;
+  width:20px
+}
+/* For post  */
+.post-box{}
+
+.post-box .post-header{
+  display: flex;
+  text-align: left;
+}
+
+.post-box .post-header .profile-img{
+  
+  height: 50px;
+  width: 50px;
+  background-color:rgb(43, 6, 131);
+  border-radius: 30px;
+}
+
+.post-box .post-header .user-name{
+  margin-left: 10px;
+  margin-top: 8px;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.post-body{
+  white-space: pre-line; 
+}
+
+
+
+/* for message box */
+
+.absolute-bottom-corner{
+  position: absolute;
+  bottom:0;
+  left:2%;
+}
+
+.sms-box .sms-title{
+
+  height: 50px;
+}
+
+.sms-box .sms-body{
+  
+  height: 200px;
+  overflow: auto;
+}
+.sms-box .sms-body .sms {
+  padding:3px;
+  width:210px;
+  border-radius:4px;
+  white-space: pre-line; 
+  margin-top: 10px;
+  white-space: initial;
+  
+  
+ 
+}
+
+.sms-box .sms-body .sms-my{
+  float: right;
+  background-color: blue;
+  color:white;
+}
+.sms-box .sms-body .sms-frnd{
+  float: left;
+  background-color: gray;
+  color:white;
+}
+.sms-box .sms-footer{
+  height: 10%;
+}
+
+.d-none{
+  display: none;
+  
+}
+.d-initial{
+  display: initial;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
