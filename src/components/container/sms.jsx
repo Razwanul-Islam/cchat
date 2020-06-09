@@ -1,8 +1,26 @@
 import React, { Component } from "react";
 import fire from "../../db/firedb";
+import Scroll from 'react-scroll';
+
+var Link = Scroll.Link;
+var DirectLink = Scroll.DirectLink;
+var Element = Scroll.Element;
+var Events = Scroll.Events;
+var scroll = Scroll.animateScroll;
+var scrollSpy = Scroll.scrollSpy;
 class SMS extends Component {
   state = { name: "", sms: [], typed: "" };
   componentDidMount() {
+    Events.scrollEvent.register('begin', function () {
+      console.log("begin", arguments);
+    });
+
+    Events.scrollEvent.register('end', function () {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+
     this.setState({ name: this.props.friendname });
     this.setState({sms:[]})
     fire
@@ -21,6 +39,9 @@ class SMS extends Component {
           
         });
       });
+
+    
+
   }
 
   

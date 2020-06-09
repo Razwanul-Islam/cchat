@@ -81,7 +81,7 @@ class Friends extends Component {
   };
   render() {
     return (
-      <div className="content-box shadow-sm">
+      <div className="content-box shadow-sm" id="friends">
         <div className="title" style={{ height: "80px" }}>
           Friends
           <div className="row" style={{ color: "lightblue" }}>

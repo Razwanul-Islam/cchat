@@ -20,7 +20,7 @@ class Notification extends Component {
      }
     render() { 
         return ( 
-        <div className="content-box shadow-sm">
+        <div className="content-box shadow-sm" id="notification">
           <div className="title">Notification</div>
           <div className="body">
               {this.state.notifications.map(data=>(

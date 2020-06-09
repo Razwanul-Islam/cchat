@@ -20,7 +20,7 @@ class Main extends Component {
                 <Friends user={this.props.user.split(".").join("")}/>
                 </div>
                 
-                <div className="col-sm-12 col-md-6 side-bar">
+                <div className="col-sm-12 col-md-6 side-bar" id="home">
                     <PostBox user={this.props.user}/>
                     <div className="side-bar">{this.state.p.map(data=><Post user={this.props.user.split(".").join("")}/>)}</div>
                     

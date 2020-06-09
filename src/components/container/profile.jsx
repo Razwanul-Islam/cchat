@@ -215,7 +215,7 @@ class Profile extends Component {
   }
   render() {
     return (
-      <div className="content-box shadow-sm">
+      <div className="content-box shadow-sm " id="profile">
         <div className="title">Profile</div>
         <div className="body">
           <div className="profile items-align-center">

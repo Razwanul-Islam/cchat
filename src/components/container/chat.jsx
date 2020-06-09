@@ -28,7 +28,7 @@ class Chat extends Component {
      }
     render() { 
         return ( 
-        <div className="content-box shadow-sm">
+        <div className="content-box shadow-sm" id="chat">
           <div className="title">Chat</div>
           <div className="body">
 

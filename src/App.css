@@ -55,14 +55,14 @@
 
 .content-box {
   margin-top: 10px;
-  height: 445px;
+  height: 98vh;
   margin-bottom: 20px;
   border-radius: 5px;
   box-shadow: 0px 1px 4px gray;
   background-color: white;
 }
 .content-box .title {
-  height: 35px;
+  height: 6%;
   color: white;
   font-style: italic;
   justify-content: center;
@@ -75,7 +75,7 @@
   border-radius: 5px 5px 0px 0px;
 }
 .content-box .body {
-  height: 410px;
+  height: 94%;
   color: rgb(10, 10, 10);
   border-radius: 0px 0px 5px 5px;
   overflow: auto;
