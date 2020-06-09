@@ -31,7 +31,20 @@ class Login extends Component {
       fire
         .auth()
         .createUserWithEmailAndPassword(this.state.email, this.state.pass)
-        .then()
+        .then(()=>{
+          fire.database().ref("profile").child(this.state.email.split(".").join("")).set(
+            {
+              uid:this.state.email.split(".").join(""),
+              plink:"",
+              name:"Not set",
+              dob:"Not set",
+              city:"Not set" ,
+              country:"Not set",
+              gender:"Not set",
+              institution:"Not set",
+              religion:"Not set"}
+          )
+        })
         .catch((err) => {
           this.setState({ err: err.message });
         });

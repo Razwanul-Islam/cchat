@@ -4,16 +4,46 @@ class SMS extends Component {
   state = { name: "", sms: [], typed: "" };
   componentDidMount() {
     this.setState({ name: this.props.friendname });
+    this.setState({sms:[]})
     fire
       .database()
       .ref("sms")
       .child(this.props.smsdata.chatid)
       .on("value", (snap) => {
         snap.forEach((csnap) => {
-          this.setState({ sms: [...this.state.sms, csnap.val()] });
+          let key=csnap.key;
+          if(this.state.sms.findIndex(x=> x.key===key)===-1){
+            let text=csnap.val().text;
+            let style="sms sms-my ";
+          if(csnap.val().uid!=this.props.user){style=style+'sms-frnd'}
+          this.setState({ sms: [...this.state.sms, {text:text,key:key,style:style}] });
+          }//end of condition
+          
         });
       });
   }
+
+  
+ componentWillUpdate(){
+  
+  fire
+      .database()
+      .ref("sms")
+      .child(this.props.smsdata.chatid)
+      .on("value", (snap) => {
+        snap.forEach((csnap) => {
+          let key=csnap.key;
+          if(this.state.sms.findIndex(x=> x.key===key)===-1){
+            let text=csnap.val().text;
+            let style="sms sms-my ";
+          if(csnap.val().uid!=this.props.user){style=style+'sms-frnd'}
+          this.setState({ sms: [...this.state.sms, {text:text,key:key,style:style}] });
+          }//end of condition
+          
+        });
+      });
+ }
+  
 
   sendSMS = () => {
     fire
@@ -21,11 +51,11 @@ class SMS extends Component {
       .ref("sms")
       .child(this.props.smsdata.chatid)
       .push()
-      .set({ text: this.state.typed });
+      .set({ text: this.state.typed,uid:this.props.user });
   };
   render() {
     return (
-      <div className="content-box fixed-bottom w-25 shadow-sm ">
+      <div className="content-box w-25 shadow-sm fixed-bottom absolute">
         <div className="title">
           Messages
           <a
@@ -44,7 +74,7 @@ class SMS extends Component {
             <hr />
             <div className="sms-body">
               {this.state.sms.map((data, index) => (
-                <div className="sms sms-my">{data.text}</div>
+                <div key={data.key} className={data.style}>{data.text}</div>
               ))}
             </div>
               <hr />

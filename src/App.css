@@ -79,7 +79,7 @@
   color: rgb(10, 10, 10);
   border-radius: 0px 0px 5px 5px;
   overflow: auto;
-  padding:5px;
+  padding: 5px;
   /* border-left: 1px solid rgb(43, 6, 131); */
   /* border-right: 1px solid rgb(43, 6, 131); */
   /* border-bottom: 1px solid rgb(43, 6, 131); */
@@ -93,53 +93,51 @@
 }
 
 /* Chat box */
-.chat-box{
-  padding:10px;
+.chat-box {
+  padding: 10px;
   display: flex;
   border-bottom: 1px solid gray;
-  margin:2px;
-  margin-bottom:5px;
+  margin: 2px;
+  margin-bottom: 5px;
   box-shadow: 0px 0px 3px rgba(73, 66, 90, 0.644);
 }
-.chat-box .img{
-  
+.chat-box .img {
   height: 60px;
   width: 60px;
   background-color: indigo;
   border-radius: 2px;
 }
-.chat-box .friend-name{
-  margin-left:20px;
+.chat-box .friend-name {
+  margin-left: 20px;
   font-size: 18px;
   font-weight: 650;
-  font-family:serif;
+  font-family: serif;
 }
 
-.chat-box .chat-title{
+.chat-box .chat-title {
   text-align: left;
-  margin-left:20px;
+  margin-left: 20px;
   font-size: 20px;
   font-weight: 650;
-  font-family:serif;
+  font-family: serif;
 }
 
 /* Notification box */
 
-.noti-box{
+.noti-box {
   height: 90px;
-  padding:10px;
+  padding: 10px;
   text-align: left;
   border-bottom: 1px solid gray;
-  margin:2px;
-  margin-bottom:5px;
+  margin: 2px;
+  margin-bottom: 5px;
   box-shadow: 0px 0px 3px rgba(73, 66, 90, 0.644);
 }
-.noti-box .noti-title{
+.noti-box .noti-title {
   font-size: 20px;
   font-weight: 650px;
-  
 }
-.noti-box .detail{
+.noti-box .detail {
   font-size: 15px;
   color: rgba(73, 66, 90, 0.644);
 }
@@ -151,46 +149,44 @@
   overflow: auto;
 }
 
-.noti-box .text-muted{
+.noti-box .text-muted {
   align-self: end;
   float: right;
 }
 
 /* Profile box css */
 
-.profile{
-  
+.profile {
 }
 
-.profile .img{
-  height:180px;
+.profile .img {
+  height: 180px;
   width: 180px;
   background-color: slateblue;
   border-radius: 90px;
 }
 
-
-.profile .table td img{
-  height:20px;
-  width:20px
+.profile .table td img {
+  height: 20px;
+  width: 20px;
 }
 /* For post  */
-.post-box{}
+.post-box {
+}
 
-.post-box .post-header{
+.post-box .post-header {
   display: flex;
   text-align: left;
 }
 
-.post-box .post-header .profile-img{
-  
+.post-box .post-header .profile-img {
   height: 50px;
   width: 50px;
-  background-color:rgb(43, 6, 131);
+  background-color: rgb(43, 6, 131);
   border-radius: 30px;
 }
 
-.post-box .post-header .user-name{
+.post-box .post-header .user-name {
   margin-left: 10px;
   margin-top: 8px;
   font-family: cursive;
@@ -199,61 +195,51 @@
   font-size: 18px;
 }
 
-.post-body{
-  white-space: pre-line; 
+.post-body {
+  white-space: pre-line;
 }
-
-
 
 /* for message box */
 
-.absolute-bottom-corner{
+.absolute-bottom-corner {
   position: absolute;
-  bottom:0;
-  left:2%;
 }
 
-.sms-box .sms-title{
-
+.sms-box .sms-title {
   height: 50px;
 }
 
-.sms-box .sms-body{
-  
+.sms-box .sms-body {
   height: 200px;
   overflow: auto;
 }
 .sms-box .sms-body .sms {
-  padding:3px;
-  width:210px;
-  border-radius:4px;
-  white-space: pre-line; 
+  padding: 3px;
+  width: 210px;
+  border-radius: 4px;
+  white-space: pre-line;
   margin-top: 10px;
   white-space: initial;
-  
-  
- 
 }
 
-.sms-box .sms-body .sms-my{
+.sms-box .sms-body .sms-my {
   float: right;
   background-color: blue;
-  color:white;
+  color: white;
 }
-.sms-box .sms-body .sms-frnd{
+.sms-box .sms-body .sms-frnd {
   float: left;
   background-color: gray;
-  color:white;
+  color: white;
 }
-.sms-box .sms-footer{
+.sms-box .sms-footer {
   height: 10%;
 }
 
-.d-none{
+.d-none {
   display: none;
-  
 }
-.d-initial{
+.d-initial {
   display: initial;
 }
 

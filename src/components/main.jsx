@@ -13,20 +13,20 @@ class Main extends Component {
     render() { 
         return ( <div className="container-fluid bg-light">
             <div className="row">
-                <div className="col-3 side-bar">
+                <div className="col-sm-12 col-md-3 side-bar">
                     
                 <Profile user={this.props.user.split(".").join("")} />
                 {/* <br/> */}
                 <Friends user={this.props.user.split(".").join("")}/>
                 </div>
                 
-                <div className="col-6 side-bar">
+                <div className="col-sm-12 col-md-6 side-bar">
                     <PostBox user={this.props.user}/>
                     <div className="side-bar">{this.state.p.map(data=><Post user={this.props.user.split(".").join("")}/>)}</div>
                     
                 </div>
 
-                <div className="col-3 side-bar">
+                <div className="col-sm-12 col-md-3 side-bar">
                     <Notification user={this.props.user.split(".").join("")}/>
                     <Chat user={this.props.user.split(".").join("")} />
                    
