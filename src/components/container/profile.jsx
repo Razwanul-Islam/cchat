@@ -196,10 +196,9 @@ class Profile extends Component {
   }
 
   onUpload=()=>{
-    console.log(this.state.photoFile)
     this.profilePhoto.put(this.state.photoFile)
     .on('state_changed',(snapshot)=>{}
-    ,(err)=>{console.log(err);},
+    ,(err)=>{},
     ()=>{
       this.profilePhoto.getDownloadURL().then((url)=>{this.setState({plink:url})})
       console.log("successfully Uploaded ");
@@ -226,6 +225,7 @@ class Profile extends Component {
             </div>
             
             <table className="table table-hover text-left">
+              <tbody>
               <tr>
                 <th>Name</th>
                 <td className={this.state.ename[0]}>{this.state.name}</td>
@@ -399,6 +399,7 @@ class Profile extends Component {
                   </a>
                 </td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>

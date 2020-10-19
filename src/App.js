@@ -28,7 +28,7 @@ logout=()=>{
   render() {
     return (
       <div className="App">
-        {this.state.user ? (<Body user={this.state.user}/>): <Login />}
+        {this.state.user ? (<Body user={this.state.user.split(".").join("")}/>): <Login />}
       </div>
     );
   }

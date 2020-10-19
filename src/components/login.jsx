@@ -8,6 +8,7 @@ class Login extends Component {
     pass: "",
     cpass: "",
     err: null,
+    name:'',
     login: true,
     style: {
       isValid: "isValid",
@@ -27,7 +28,7 @@ class Login extends Component {
 
   //Method for user Sign-up
   signup = () => {
-    if (this.isPassMatch()) {
+    if (this.isPassMatch() && this.state.name!=='') {
       fire
         .auth()
         .createUserWithEmailAndPassword(this.state.email, this.state.pass)
@@ -36,7 +37,7 @@ class Login extends Component {
             {
               uid:this.state.email.split(".").join(""),
               plink:"",
-              name:"Not set",
+              name:this.state.name,
               dob:"Not set",
               city:"Not set" ,
               country:"Not set",
@@ -49,7 +50,7 @@ class Login extends Component {
           this.setState({ err: err.message });
         });
     } else {
-      this.setState({ err: "Password Not Matching !" });
+      this.setState({ err: "Password Not Matching OR Form is not filluped correctly " });
     }
   };
 
@@ -111,6 +112,16 @@ class Login extends Component {
               ) : (
                 ""
               )}
+              {!this.state.login && 
+                <input
+                type="email"
+                id="login"
+                className="fadeIn second"
+                name="name"
+                onChange={this.handleChange}
+                placeholder="Full Name"
+              />
+              }
               <input
                 type="email"
                 id="login"

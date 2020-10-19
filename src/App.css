@@ -125,7 +125,7 @@
 /* Notification box */
 
 .noti-box {
-  height: 90px;
+  height: 120px; 
   padding: 10px;
   text-align: left;
   border-bottom: 1px solid gray;
@@ -204,19 +204,27 @@
 .absolute-bottom-corner {
   position: absolute;
 }
-
+#sms .body{
+  position: relative;
+  width:100%;
+  padding:0px;
+}
+.sms-box{
+  padding-left:5px;
+  padding-right:5px;
+}
 .sms-box .sms-title {
   height: 50px;
 }
 
 .sms-box .sms-body {
-  height: 200px;
+  height: 62vh;
   overflow: auto;
 }
 .sms-box .sms-body .sms {
   padding: 3px;
   width: 210px;
-  border-radius: 4px;
+  border-radius: 10px;
   white-space: pre-line;
   margin-top: 10px;
   white-space: initial;
@@ -227,11 +235,13 @@
   background-color: blue;
   color: white;
 }
+
 .sms-box .sms-body .sms-frnd {
   float: left;
   background-color: gray;
   color: white;
 }
+
 .sms-box .sms-footer {
   height: 10%;
 }
@@ -242,6 +252,7 @@
 .d-initial {
   display: initial;
 }
+
 
 @keyframes App-logo-spin {
   from {

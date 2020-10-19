@@ -23,8 +23,8 @@ class Notification extends Component {
         <div className="content-box shadow-sm" id="notification">
           <div className="title">Notification</div>
           <div className="body">
-              {this.state.notifications.map(data=>(
-                  <div className="noti-box">
+              {this.state.notifications.map((data,index)=>(
+                  <div className="noti-box" key={index}>
                   <span className="noti-title">
                       {data.title}
                   </span>

@@ -5,7 +5,7 @@ import SMS from "./sms"
 class Chat extends Component {
     state = { available:[],
         smsdata:{name:"",chatid:'',time:""},
-        smsAppear:false
+        smsAppear:false,isFirst:true
      }
 
      componentDidMount(){
@@ -17,6 +17,9 @@ class Chat extends Component {
         })//end of on 
      }
 
+     isFirstExchane=()=>{
+         this.setState({isFirst:false})
+     }
      //method for disappear the sms window
      smsDisappear=()=>{
          this.setState({smsAppear:false})
@@ -32,13 +35,14 @@ class Chat extends Component {
           <div className="title">Chat</div>
           <div className="body">
 
-              {this.state.available.map((data,index)=> (<div key={index} className="chat-box" onClick={()=>{this.goToSms(data)}}>
-                  <img className="img" src={data.plink}/>
+              {this.state.available.map((data,index)=> (<div href='#sms' key={index} className="chat-box" onClick={()=>{this.goToSms(data)}}>
+                <a href='#sms'>  <img className="img" src={data.plink}/>
         <span className="friend-name">{data.name}</span>
+        </a>
               </div>))}
               
           </div>
-          {this.state.smsAppear &&  <SMS user={this.props.user.split(".").join("")} smsdata={this.state.smsdata} friendname={this.state.smsdata.name} disappear={this.smsDisappear}/>}
+          {this.state.smsAppear &&  <SMS isFirst={this.state.isFirst} isFE={this.isFirstExchane} user={this.props.user.split(".").join("")} smsdata={this.state.smsdata} friendname={this.state.smsdata.name} disappear={this.smsDisappear}/>}
          
         </div>
        );
